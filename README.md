@@ -8,4 +8,4 @@
 можно при переходе на страницу /add-products
 Для запуска сайта необходимо выполнить в консоли следующие команды
 > * export FLASK_APP=market.py
-* flask run
+> * flask run
