@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+    <link href="//yastatic.net/market-skubi/_/f0jMfUc4Vok13_jg_t9TU5E5UKU.css" rel="stylesheet" type="text/css">
+    <script src="https://an.yandex.ru/resource/context_static_r_3061.js"></script>
+    <script id="context_static_10768" src="https://an.yandex.ru/resource/context_static_r_10768.js"></script>
+    <script type="text/javascript" src="//an.yandex.ru/system/context.js" async=""></script>
+    <script src="//yastatic.net/jquery/1.8.2/jquery.min.js" defer=""></script>
+    <script src="//yastatic.net/market-skubi/_/CtDUkb-pQOIJ3jR1U6pK3w-j874.js" defer=""></script>
+    {% if not product.id %}
+    <title>Продукт не найден</title>
+    {% else %}
+    <title>{{ product.title }}</title>
+    {% endif %}
+</head>
+<body>
+{% if not product.id %}
+<p>Данного продукта нет в каталоге, попробуйте снова</p>
+{% else %}
+<div class="layout layout_type_maya">
+    <ul class="n-breadcrumbs i-bem n-breadcrumbs_js_inited" id="n-breadcrumbs">
+        <li class="n-breadcrumbs__item">
+            <a class="link i-bem link_js_inited" title="Каталог" href="/">Каталог</a>
+        </li>
+        <li class="n-breadcrumbs__item">
+            <a class="link" title="{{ product.title }}" href="/product/{{ product.id }}">{{ product.title }}</a>
+        </li>
+    </ul>
+    <div class="n-product-summary__headline">
+        <div class="n-product-title">
+            <div class="n-title__text">
+                <h1 class="title title_size_22">{{ product.title }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="n-summary n-summary_type_product n-product-summary__content">
+    <div class="n-summary__col n-summary__col_size_5">
+        <div class="n-gallery-wrapper">
+            <div class="n-product-summary__gallery n-gallery-wrapper">
+                <div class="n-gallery-product n-gallery i-bem n-gallery_thumbs_yes n-gallery_zoom-available_yes n-gallery_js_inited n-gallery-product_js_inited" id="n-gallery-product">
+                    <div class="n-gallery__thumbs-container">
+                        <ul class="n-gallery__thumbs" data-slider-id="gallery-38459">
+                            <li class="n-gallery__thumbs-item n-gallery__thumbs-item_state_selected">
+                                <img class="image" src="{{ url_for('static', filename=product.image1) }}" alt="" title="">
+                            </li>
+                            {% if product.image2 %}
+                            <li class="n-gallery__thumbs-item">
+                                <img class="image" src="{{ url_for('static', filename=product.image2) }}" alt="" title="">
+                            </li>
+                            {% endif %}
+                            {% if product.image3 %}
+                            <li class="n-gallery__thumbs-item">
+                                <img class="image" src="{{ url_for('static', filename=product.image3) }}" alt="" title="">
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="n-gallery__image-container">
+                        <div class="n-gallery__inner n-gallery_loaded_yes" data-slider-id="gallery-38459">
+                            <div class="n-gallery__stage-outer">
+                                <div class="n-gallery__stage" style="transform: translate3d(-760px, 0px, 0px); transition: all 0s ease 0s; width: 5320px;">
+                                    <div class="n-gallery__item-wrap n-gallery__item-wrap_cloned_yes" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap n-gallery__item-wrap_cloned_yes" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap n-gallery__item-wrap_active_yes" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/331398/img_id695528519618039669/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/96484/img_id66401225491604707/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/466729/img_id1424119088555673128/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/331398/img_id6221223021850607033/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/195452/img_id2131589461918617962/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/200316/img_id5517301269526864769/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/200316/img_id8838237642516690461/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/466729/img_id382919798489486397/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/466729/img_id639045282784638170/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap n-gallery__item-wrap_cloned_yes" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="n-gallery__item-wrap n-gallery__item-wrap_cloned_yes" style="width: 366px; margin-right: 14px;">
+                                        <div class="n-gallery__item">
+                                            <img class="n-gallery__image image" src="//avatars.mds.yandex.net/get-mpic/331398/img_id695528519618039669/9hq" alt="{{ product.title }}" title="{{ product.title }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n-gallery__zoom">Увеличить</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="n-summary__col n-summary__col_size_4">
+        <div class="n-product-summary__filters">
+            <div class="n-product-top-filters i-bem n-product-top-filters_js_inited">
+                <div class="n-product-top-filters__panels-inline-wrap"></div>
+            </div>
+        </div>
+        <div class="n-product-content-block">
+            <h3 class="n-product-content-block__title">Коротко о товаре</h3>
+            <div class="n-product-content-block__content">
+                <ul class="n-product-spec-list">
+                    {% for item in product.description.split(';') %}
+                        <li class="n-product-spec-list__item n-product-spec-list__item_type_friendly">{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="n-summary__col n-summary__col_size_3">
+        <div class="n-product-summary__default-offer preloadable i-bem preloadable_js_inited">
+            <div class="n-product-default-offer i-bem n-product-default-offer_js_inited" id="n-product-default-offer">
+                <div class="n-product-default-offer__price">
+                    <span class="n-product-default-offer__price-value">
+                        <span class="price">{{ product.price}}&nbsp;₽</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="n-product-summary-toolbar">
+            <span class="n-product-summary-toolbar__action n-product-summary__default-offer-buttons">
+                <div class="n-offer-action offer shop-history offer__out-stock offer__out-stock-message i-bem offer_js_inited offer_state_no-cpa">
+                    <a role="button" type="button" class="button2 button2_size_m i-bem button2_mode_sharp button2_pin_round-clear button2_to_shop button2_theme_blue shop-history__link metrika b-zone b-spy-visible b-spy-events at-offer-button-cpc button2_js_inited metrika_js_inited b-spy-visible_js_inited b-zone_js_inited" href="/">
+                        <span class="button2__text">Купить</span>
+                    </a>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+{% endif %}
+</body>
+</html>
